@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>data2.solutions — AI Text-to-SQL & Knowledge Bots</title>
+  <meta name="description" content="We build AI agents that let your team query databases and company knowledge in plain English. No SQL. No digging. Just answers." />
+  <meta property="og:title" content="data2.solutions — AI Text-to-SQL & Knowledge Bots" />
+  <meta property="og:description" content="Turn your data and documents into instant AI-powered answers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://data2.solutions" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════ NAV ══════════════════════════ -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">data<span>2</span>.solutions</a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#book">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#book" class="btn btn-primary">Book a Free Call</a>
+      <div class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav">
+  <a href="#services">Services</a>
+  <a href="#results">Results</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#book">Book a Free Call</a>
+</div>
+
+<!-- ══════════════════════════ HERO ══════════════════════════ -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        AI-Powered Data Agents
+      </div>
+      <h1>
+        Your Data, Answered in<br />
+        <span class="gradient-text">Plain English</span>
+      </h1>
+      <p>
+        We build AI agents that let your team query databases and company knowledge instantly — no SQL, no waiting on analysts, no digging through files.
+      </p>
+      <div class="hero-actions">
+        <a href="#book" class="btn btn-primary btn-lg">
+          Book a Free Discovery Call
+        </a>
+        <a href="#services" class="btn btn-outline btn-lg">
+          See What We Build
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-value">10x</div>
+          <div class="stat-label">Faster data access</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">~80%</div>
+          <div class="stat-label">Reduction in analyst bottlenecks</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">2 wks</div>
+          <div class="stat-label">Average time to deploy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ DEMO ══════════════════════════ -->
+<div class="demo-section">
+  <div class="container">
+    <div class="demo-wrapper fade-up">
+      <div class="demo-tabs">
+        <div class="demo-tab active" data-tab="demo-sql">Text-to-SQL</div>
+        <div class="demo-tab" data-tab="demo-kb">Knowledge Bot</div>
+      </div>
+
+      <!-- Text-to-SQL Demo -->
+      <div id="demo-sql" class="demo-body active">
+        <div class="demo-screen">
+          <div class="demo-line">
+            <span class="demo-prompt">You</span>
+            <span class="demo-user" id="demo-user-text"><span class="demo-cursor"></span></span>
+          </div>
+          <div class="demo-line">
+            <span class="demo-prompt" style="color:#a78bfa">SQL</span>
+            <span class="demo-response" id="demo-sql-text"></span>
+          </div>
+          <div id="demo-result-block" style="display:none; margin-top:0.5rem;">
+            <table class="demo-table">
+              <thead>
+                <tr>
+                  <th>Customer</th>
+                  <th>Revenue</th>
+                  <th>Orders</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Acme Corp</td><td>$284,500</td><td>47</td></tr>
+                <tr><td>TechFlow Inc</td><td>$211,200</td><td>38</td></tr>
+                <tr><td>DataBridge LLC</td><td>$198,750</td><td>31</td></tr>
+                <tr><td>NexGen Systems</td><td>$176,400</td><td>29</td></tr>
+                <tr><td>Veridian Group</td><td>$154,900</td><td>24</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:0.75rem; color:#10b981; font-size:0.8rem;">✓ 5 of 10 results shown — query executed in 0.34s</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Knowledge Bot Demo -->
+      <div id="demo-kb" class="demo-body">
+        <div class="demo-screen">
+          <div class="demo-line">
+            <span class="demo-prompt">You</span>
+            <span class="demo-user">What's our refund policy for enterprise clients?</span>
+          </div>
+          <div class="demo-line" style="margin-top:0.5rem;">
+            <span class="demo-prompt" style="color:#06b6d4">Bot</span>
+            <span style="color:#e2e8f0; line-height:1.8;">
+              Enterprise clients on annual plans are eligible for a prorated refund within the first 90 days. After 90 days, account credits are issued instead of cash refunds.<br />
+              <span style="color:#64748b; font-size:0.78rem;">📄 Source: Enterprise Agreement v2.3, Section 7.2 — Refund Policy</span>
+            </span>
+          </div>
+          <div class="demo-line" style="margin-top:0.75rem;">
+            <span class="demo-prompt">You</span>
+            <span class="demo-user">Who handles enterprise escalations?<span class="demo-cursor"></span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════ PROBLEM ══════════════════════════ -->
+<section id="problem">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">The Problem</div>
+      <h2>Your data is locked away</h2>
+      <p>Most businesses sit on a goldmine of data — but accessing it requires technical expertise, creates bottlenecks, and slows decisions.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card fade-up">
+        <div class="problem-icon">🕐</div>
+        <h3>Analyst Bottlenecks</h3>
+        <p>Every data question gets queued. By the time the answer arrives, the business decision has moved on.</p>
+      </div>
+      <div class="problem-card fade-up">
+        <div class="problem-icon">📂</div>
+        <h3>Knowledge Buried in Docs</h3>
+        <p>SOPs, policies, and contracts live in PDFs and wikis that nobody can search effectively — so teams re-invent the wheel.</p>
+      </div>
+      <div class="problem-card fade-up">
+        <div class="problem-icon">💸</div>
+        <h3>High Tool Costs, Low Adoption</h3>
+        <p>BI tools like Tableau and Looker are expensive and require training. Most employees never use them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ SERVICES ══════════════════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">What We Build</div>
+      <h2>AI agents built for your business</h2>
+      <p>We design, build, and deploy custom AI agents tailored to your existing data and workflows — not off-the-shelf software.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon">🗄️</div>
+        <h3>Text-to-SQL Agents</h3>
+        <p>Ask your database anything in plain English. Get instant, accurate results — no SQL knowledge required.</p>
+        <ul class="service-features">
+          <li>Works with PostgreSQL, MySQL, BigQuery, Snowflake</li>
+          <li>Natural language query interface</li>
+          <li>Automatic query validation & safeguards</li>
+          <li>Explainable results with source SQL</li>
+          <li>Role-based data access controls</li>
+        </ul>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">🤖</div>
+        <h3>Knowledge Bots</h3>
+        <p>Instant answers from your documents, PDFs, wikis, and internal knowledge bases.</p>
+        <ul class="service-features">
+          <li>Ingests PDFs, Notion, Confluence, Google Docs</li>
+          <li>Cites exact sources with every answer</li>
+          <li>Slack & Teams integration</li>
+          <li>Always up-to-date with your latest docs</li>
+          <li>Handles complex multi-document questions</li>
+        </ul>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">⚙️</div>
+        <h3>Custom AI Pipelines</h3>
+        <p>End-to-end automation that combines data retrieval, reasoning, and action — tailored to your workflow.</p>
+        <ul class="service-features">
+          <li>Multi-step agent workflows</li>
+          <li>CRM and ERP integrations</li>
+          <li>Automated report generation</li>
+          <li>Anomaly detection & alerting</li>
+          <li>Custom dashboards with AI commentary</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ HOW IT WORKS ══════════════════════════ -->
+<section id="how-it-works">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Process</div>
+      <h2>From kickoff to deployed in 2 weeks</h2>
+      <p>A lean, focused process. We scope fast, build fast, and ship — so you see value before you've finished onboarding a new hire.</p>
+    </div>
+    <div class="steps">
+      <div class="step fade-up">
+        <div class="step-number">1</div>
+        <h3>Discovery Call</h3>
+        <p>30 minutes to understand your data stack, your team's pain points, and what "instant answers" would unlock for you.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-number">2</div>
+        <h3>Scoping & Proposal</h3>
+        <p>We define the agent's scope, data sources, and success metrics. You get a fixed-price proposal — no surprises.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-number">3</div>
+        <h3>Build & Iterate</h3>
+        <p>We build a working prototype in week one, then refine with your feedback in week two. You test in a real environment.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-number">4</div>
+        <h3>Deploy & Support</h3>
+        <p>We deploy to your infrastructure, train your team, and provide ongoing support as your data evolves.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ RESULTS ══════════════════════════ -->
+<section id="results">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Results</div>
+      <h2>What clients actually experience</h2>
+      <p>Real outcomes from real deployments — not marketing copy.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card fade-up">
+        <div class="result-metric">
+          <div class="result-value">12h</div>
+          <div class="result-unit">saved per week</div>
+        </div>
+        <div class="result-divider"></div>
+        <div class="result-content">
+          <h3>Eliminated analyst backlog</h3>
+          <p>A sales ops team went from waiting 2 days for reports to getting answers in seconds. The analyst now focuses on strategic analysis instead of ad-hoc queries.</p>
+          <span class="result-industry">SaaS / Sales Operations</span>
+        </div>
+      </div>
+      <div class="result-card fade-up">
+        <div class="result-metric">
+          <div class="result-value">4x</div>
+          <div class="result-unit">faster onboarding</div>
+        </div>
+        <div class="result-divider"></div>
+        <div class="result-content">
+          <h3>Knowledge bot replaced 40-page handbook</h3>
+          <p>New hires could ask any question and get an accurate, sourced answer instantly. Support tickets from new staff dropped 60% in the first month.</p>
+          <span class="result-industry">Professional Services</span>
+        </div>
+      </div>
+      <div class="result-card fade-up">
+        <div class="result-metric">
+          <div class="result-value">$0</div>
+          <div class="result-unit">BI tool licenses</div>
+        </div>
+        <div class="result-divider"></div>
+        <div class="result-content">
+          <h3>Replaced Tableau for 90% of use cases</h3>
+          <p>An e-commerce brand cancelled their $2,400/mo Tableau subscription. The text2SQL agent handled every regular reporting need for the whole team.</p>
+          <span class="result-industry">E-Commerce</span>
+        </div>
+      </div>
+      <div class="result-card fade-up">
+        <div class="result-metric">
+          <div class="result-value">98%</div>
+          <div class="result-unit">query accuracy</div>
+        </div>
+        <div class="result-divider"></div>
+        <div class="result-content">
+          <h3>Finance team trusts AI-generated data</h3>
+          <p>A CFO's team was skeptical at first. After three months of validated queries, they now use the agent for daily P&L reporting and investor updates.</p>
+          <span class="result-industry">Finance & Accounting</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ PRICING ══════════════════════════ -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Pricing</div>
+      <h2>Straightforward, fixed-price projects</h2>
+      <p>No retainer lock-in. No hourly billing surprises. You know exactly what you're getting before we start.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="pricing-card fade-up">
+        <div class="pricing-name">Starter</div>
+        <div class="pricing-price">$2,500 <span>one-time</span></div>
+        <p class="pricing-desc">One focused agent for a single use case.</p>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> 1 agent (SQL or Knowledge Bot)</li>
+          <li><span class="check">✓</span> Up to 2 data sources</li>
+          <li><span class="check">✓</span> Slack or web UI integration</li>
+          <li><span class="check">✓</span> 2-week delivery</li>
+          <li><span class="check">✓</span> 30-day support</li>
+          <li><span class="minus">–</span> Custom integrations</li>
+          <li><span class="minus">–</span> Multi-agent workflows</li>
+        </ul>
+        <a href="#book" class="btn btn-outline">Get Started</a>
+      </div>
+
+      <div class="pricing-card featured fade-up">
+        <div class="featured-badge">Most Popular</div>
+        <div class="pricing-name">Growth</div>
+        <div class="pricing-price">$6,500 <span>one-time</span></div>
+        <p class="pricing-desc">A complete AI data layer for your team.</p>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> 2 agents (SQL + Knowledge Bot)</li>
+          <li><span class="check">✓</span> Up to 5 data sources</li>
+          <li><span class="check">✓</span> Slack, Teams, or web UI</li>
+          <li><span class="check">✓</span> Custom integrations</li>
+          <li><span class="check">✓</span> 2-week delivery</li>
+          <li><span class="check">✓</span> 90-day support</li>
+          <li><span class="check">✓</span> Team training session</li>
+        </ul>
+        <a href="#book" class="btn btn-primary">Book a Call</a>
+      </div>
+
+      <div class="pricing-card fade-up">
+        <div class="pricing-name">Enterprise</div>
+        <div class="pricing-price">Custom</div>
+        <p class="pricing-desc">Multi-agent pipelines for complex data environments.</p>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> Unlimited agents</li>
+          <li><span class="check">✓</span> Unlimited data sources</li>
+          <li><span class="check">✓</span> Full custom UI/dashboard</li>
+          <li><span class="check">✓</span> ERP/CRM integration</li>
+          <li><span class="check">✓</span> SLA & priority support</li>
+          <li><span class="check">✓</span> Ongoing retainer option</li>
+          <li><span class="check">✓</span> Dedicated Slack channel</li>
+        </ul>
+        <a href="#book" class="btn btn-outline">Let's Talk</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ BOOK ══════════════════════════ -->
+<section id="book">
+  <div class="container">
+    <div class="book-inner fade-up">
+      <div class="section-label" style="text-align:center">Book a Call</div>
+      <h2>Let's talk about your data</h2>
+      <p>30 minutes. No sales pitch. Just a focused conversation about what's slowing your team down and whether we can fix it.</p>
+
+      <!-- Replace src with your Cal.com link, e.g.: https://cal.com/yourname/discovery -->
+      <div class="cal-embed-placeholder">
+        <div style="font-size:2rem; margin-bottom:0.5rem;">📅</div>
+        <strong style="color: var(--text-primary);">Schedule a 30-min Discovery Call</strong>
+        <p>Replace this block with your Cal.com embed.<br />
+        Add: <code style="color:var(--accent); font-size:0.8rem;">&lt;script src="https://cal.com/embed.js"&gt;&lt;/script&gt;</code></p>
+        <a href="https://cal.com" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:1.25rem;">
+          Book via Cal.com →
+        </a>
+      </div>
+
+      <div class="trust-logos">
+        <span class="trust-item"><span class="icon">✓</span> No commitment</span>
+        <span class="trust-item"><span class="icon">✓</span> 30-minute session</span>
+        <span class="trust-item"><span class="icon">✓</span> Get a free scope estimate</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+<footer>
+  <div class="container footer-inner">
+    <a href="#" class="footer-logo">data<span>2</span>.solutions</a>
+    <ul class="footer-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#book">Book a Call</a></li>
+      <li><a href="mailto:hello@data2.solutions">hello@data2.solutions</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 data2.solutions. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
